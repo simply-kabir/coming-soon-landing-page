@@ -1,0 +1,35 @@
+:root {
+  --bg: #0a0a0a;
+  --gold: #c9a96e;
+  --gold-dim: rgba(201, 169, 110, 0.35);
+  --tagline: #cfcfcf;
+  --subtitle: #7a7a7a;
+  --subtext: #57575a;
+  --font-display: "Cormorant Garamond", "Times New Roman", serif;
+  --font-body: "Jost", "Helvetica Neue", Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--tagline);
+  font-family: var(--font-body), sans-serif;
+  overflow: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

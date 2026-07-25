@@ -1,0 +1,108 @@
+.wrapper {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.block {
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+  opacity: 0;
+  animation: reveal 1.1s ease-out 0.15s forwards;
+}
+
+.line {
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--gold-dim) 15%,
+    var(--gold-dim) 85%,
+    transparent
+  );
+}
+
+.name {
+  margin: 28px 0 0;
+  font-family: var(--font-display), serif;
+  font-weight: 500;
+  font-size: clamp(2.75rem, 9vw, 4.75rem);
+  letter-spacing: 0.22em;
+  color: var(--gold);
+  line-height: 1;
+}
+
+.role {
+  margin: 18px 0 0;
+  font-family: var(--font-body), sans-serif;
+  font-weight: 400;
+  font-size: 0.72rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--subtitle);
+}
+
+.divider {
+  margin: 26px auto 0;
+  width: 24px;
+  height: 1px;
+  background: var(--gold-dim);
+  position: relative;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 8px;
+  height: 1px;
+  background: var(--gold-dim);
+}
+
+.divider::before {
+  left: -14px;
+}
+
+.divider::after {
+  right: -14px;
+}
+
+.tagline {
+  margin: 26px 0 0;
+  font-family: var(--font-display), serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(1.4rem, 3.4vw, 1.75rem);
+  color: var(--tagline);
+}
+
+.sub {
+  margin: 14px 0 0;
+  font-family: var(--font-body), sans-serif;
+  font-weight: 300;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--subtext);
+}
+
+.bottomLine {
+  margin-top: 28px;
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
